@@ -4,10 +4,7 @@
   "version": "0.0.0.1",
   "manifest_version": 3,
   "permissions": [
-    "storage",
-    "activeTab",
-    "scripting",
-    "tabs"
+    "storage"
   ],
   "action": {
     "default_popup": "popup.html",
