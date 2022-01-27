@@ -1,7 +1,7 @@
 var oldHref = document.location.href;
 
 function mainRun() {
-    chrome.storage.sync.get(function (enabled) {
+    chrome.storage.sync.get("domain", function (enabled) {
         if (enabled["domain"]) {
             if ($("h1.css-164r41r").length) {
                 var address = $("h1.css-164r41r").text();
@@ -21,7 +21,7 @@ function mainRun() {
                     } else { // FTTN
                         $(".nbn-stats").append(`<p>Max Speed: ${data.body.lowerSpeed}-${data.body.upperSpeed}Mbps</p>`);
                     }
-                    if (data.networkCoexistence != null) $(".nbn-stats").append(`<p>Coexistance: ${networkCoexistence}</p>`);
+                    if (data.body.networkCoexistence.length > 0) $(".nbn-stats").append(`<p>Coexistance: ${data.body.networkCoexistence}</p>`);
                 }).fail(function () {
                     $(".nbn-stats").empty();
                     $(".nbn-stats").append(`<p>NBN not available</p>`);

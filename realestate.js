@@ -1,7 +1,7 @@
 var oldHref = document.location.href;
 
 function mainRun() {
-    chrome.storage.sync.get(function (enabled) {
+    chrome.storage.sync.get("realestate", function (enabled) {
         if (enabled["realestate"]) {
             if (window.location.href.includes("https://www.realestate.com.au/property-")) {
 
@@ -18,7 +18,7 @@ function mainRun() {
                     } else { // FTTN
                         $(".nbn-stats").append(`<p>Max Speed: ${data.body.lowerSpeed}-${data.body.upperSpeed}Mbps</p>`);
                     }
-                    if (data.networkCoexistence != null) $(".nbn-stats").append(`<p>Coexistance: ${networkCoexistence}</p>`);
+                    if (data.body.networkCoexistence.length > 0) $(".nbn-stats").append(`<p>Coexistance: ${data.body.networkCoexistence}</p>`);
                 }).fail(function () {
                     $(".nbn-stats").empty();
                     $(".nbn-stats").append(`<p>NBN not available</p>`);
