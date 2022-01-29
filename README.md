@@ -1,1 +1,1 @@
-# nbn-availability-extension
+# NBN Availability Check Chrome Extension
