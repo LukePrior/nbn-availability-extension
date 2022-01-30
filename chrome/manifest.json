@@ -1,7 +1,7 @@
 {
   "name": "NBN Availability Check",
   "description": "Check what NBN technology is available at address on realestate.com.au & domain.com.au",
-  "version": "0.0.0.2",
+  "version": "0.0.0.4",
   "manifest_version": 3,
   "permissions": [
     "storage"
@@ -25,26 +25,18 @@
   "content_scripts": [
     {
       "matches": [
-        "https://www.realestate.com.au/*"
+        "https://www.realestate.com.au/*",
+        "https://www.domain.com.au/*",
+        "https://www.realestateview.com.au/*",
+        "https://www.onthehouse.com.au/*",
+        "https://www.allhomes.com.au/*",
+        "https://www.rent.com.au/*"
       ],
       "run_at": "document_end",
       "js": [
         "jquery.js",
         "common.js",
-        "realestate.js"
-      ],
-      "css": [
-        "main.css"
-      ]
-    },
-    {
-      "matches": [
-        "https://www.domain.com.au/*"
-      ],
-      "js": [
-        "jquery.js",
-        "common.js",
-        "domain.js"
+        "main.js"
       ],
       "css": [
         "main.css"
@@ -66,7 +58,11 @@
       ],
       "matches": [
         "https://www.realestate.com.au/*",
-        "https://www.domain.com.au/*"
+        "https://www.domain.com.au/*",
+        "https://www.realestateview.com.au/*",
+        "https://www.onthehouse.com.au/*",
+        "https://www.allhomes.com.au/*",
+        "https://www.rent.com.au/*"
       ]
     }
   ],

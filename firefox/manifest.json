@@ -1,0 +1,67 @@
+{
+  "name": "NBN Availability Check",
+  "description": "Check what NBN technology is available at address on realestate.com.au & domain.com.au",
+  "version": "0.0.0.2",
+  "manifest_version": 2,
+  "permissions": [
+    "storage"
+  ],
+  "page_action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/icon16.png",
+      "32": "/images/icon32.png",
+      "48": "/images/icon48.png",
+      "128": "/images/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "/images/icon16.png",
+    "32": "/images/icon32.png",
+    "48": "/images/icon48.png",
+    "128": "/images/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.realestate.com.au/*"
+      ],
+      "run_at": "document_end",
+      "js": [
+        "jquery.js",
+        "realestate.js"
+      ],
+      "css": [
+        "main.css"
+      ]
+    },
+    {
+      "matches": [
+        "https://www.domain.com.au/*"
+      ],
+      "js": [
+        "jquery.js",
+        "domain.js"
+      ],
+      "css": [
+        "main.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "options.html"
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": false
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "{21f73c24-66ab-4116-bb42-273a41e0889f}",
+      "strict_min_version": "42.0"
+    }
+  }  
+}

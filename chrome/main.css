@@ -1,11 +1,11 @@
 /* Tooltip container */
-.tooltip {
+.nbn-tooltip {
     position: relative;
     display: inline-block;
 }
 
 /* Tooltip text */
-.tooltip .tooltiptext {
+.nbn-tooltip .nbn-tooltiptext {
     visibility: hidden;
     width: 300px;
     background-color: black;
@@ -21,8 +21,14 @@
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */
-.tooltip:hover .tooltiptext {
+.nbn-tooltip:hover .nbn-tooltiptext {
     visibility: visible;
+}
+
+/* Tooltip hyperlinks */
+.nbn-tooltiptext > a {
+    color: white;
+    font-weight: bold;
 }
 
 /* NBN box */
@@ -32,7 +38,7 @@
     padding: 10px;
     width: 100%;
     max-width: 400px;
-    height: 110px;
+    min-height: 110px;
     margin: 10px 0px;
     display: flex;
     flex-direction: column;
