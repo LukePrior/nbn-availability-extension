@@ -24,3 +24,43 @@
 .tooltip:hover .tooltiptext {
     visibility: visible;
 }
+
+/* NBN box */
+.nbn-stats {
+    border-style: solid;
+    border-width: 3px;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    height: 110px;
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+}
+
+.nbn-stats.fttp {
+    border-color: #219653;
+    background-color: #EDFFEF;
+}
+
+.nbn-stats.fttc {
+    border-color: #F2C94C;
+    background-color: #FFF2C9;
+}
+
+.nbn-stats.fttn {
+    border-color: #F2994A;
+    background-color: #FFE3CB;
+}
+
+.nbn-stats.wireless {
+    border-color: #EB5757;
+    background-color: #E6D8D8;
+}
+
+.nbn-stats > p {
+    margin-block-start:0em;
+    margin-block-end:0em;
+}

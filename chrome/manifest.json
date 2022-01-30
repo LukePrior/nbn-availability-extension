@@ -30,6 +30,7 @@
       "run_at": "document_end",
       "js": [
         "jquery.js",
+        "common.js",
         "realestate.js"
       ],
       "css": [
@@ -42,6 +43,7 @@
       ],
       "js": [
         "jquery.js",
+        "common.js",
         "domain.js"
       ],
       "css": [
@@ -56,6 +58,15 @@
       ],
       "matches": [
         "<all_urls>"
+      ]
+    },
+    {
+      "resources": [
+        "images/loading.svg"
+      ],
+      "matches": [
+        "https://www.realestate.com.au/*",
+        "https://www.domain.com.au/*"
       ]
     }
   ],
