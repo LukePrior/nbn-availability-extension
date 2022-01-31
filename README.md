@@ -10,8 +10,8 @@ This simple extension can automatically load NBN availability information for pr
 - On The House
 - All Homes
 - Rent
-
-
+- Reiwa
+- Homely
 
 # Install Instructions Chrome
 
@@ -26,3 +26,7 @@ Enable Developer mode by ticking the checkbox in the upper-right corner.
 Click on the "Load unpacked extension..." button.
 
 Navigate to the folder you unzipped and select the chrome folder at nbn-availability-extension/chrome
+
+# Install Instructions Firefox
+
+TBD: https://addons.mozilla.org/en-US/firefox/addon/nbn-availability-check/
