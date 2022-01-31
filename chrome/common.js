@@ -1,12 +1,18 @@
 var hiddenProperties = ["technologyClass"];
 
 function getData(address, callback) {
-    var url = "https://nbn-service-check.vercel.app/check?address=" + encodeURIComponent(address);
+    var url = "https://nbn-service-check-lmuee1e8h-lukeprior.vercel.app/check?address=" + encodeURIComponent(address);
 
     var formatted = {};
 
     $.getJSON(url, function (data) {
-        formatted.technologyHTML = `<p>NBN Technology: ${data.body.primaryAccessTechnology} <span class="nbn-tooltip">🛈<span class="nbn-tooltiptext"> You can read more about technology types <a href="https://www.nbnco.com.au/learn/network-technology" target="_blank">here</a></span></span></p>`;
+        var provider = "NBN";
+
+        if (data.body.hasOwnProperty("provider") && data.body.provider != "NBNCo") {
+            provider = data.body.provider;
+        }
+
+        formatted.technologyHTML = `<p>${provider} Technology: ${data.body.primaryAccessTechnology} <span class="nbn-tooltip">🛈<span class="nbn-tooltiptext"> You can read more about technology types <a href="https://www.nbnco.com.au/learn/network-technology" target="_blank">here</a></span></span></p>`;
         
         formatted.technologyClass = "wireless";
         if (data.body.primaryAccessTechnology == "Fibre To The Premises" || data.body.primaryAccessTechnology == "Fibre") {

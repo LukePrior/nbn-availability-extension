@@ -1,7 +1,7 @@
 {
   "name": "NBN Availability Check",
   "description": "Check what NBN technology is available at address on realestate.com.au & domain.com.au",
-  "version": "0.0.0.6",
+  "version": "0.0.0.7",
   "manifest_version": 3,
   "permissions": [
     "storage"
