@@ -46,15 +46,19 @@ function mainRun() {
             });
         }
     } else if (window.location.href.includes("https://www.realestateview.com.au/real-estate/") || window.location.href.includes("https://www.realestateview.com.au/rental-properties/")) { // Realestateview.com.au
-        chrome.storage.sync.get("realestateview", function (enabled) {
-            if (enabled["realestateview"]) {
-                if ($("h1.page-title").length) {
-                    var address = $("h1.page-title").text();
+        clearTimeout(loadingTimeout);
+        loadingTimeout = setTimeout(realestateview, 1000);
+        function realestateview() {
+            chrome.storage.sync.get("realestateview", function (enabled) {
+                if (enabled["realestateview"]) {
+                    if ($("h1.page-title").length) {
+                        var address = $("h1.page-title").text();
 
-                    updateInfoBox(address, ".property-attributes");
+                        updateInfoBox(address, ".property-attributes");
+                    }
                 }
-            }
-        });
+            });
+        }
     } else if (window.location.href.includes("https://www.onthehouse.com.au/property")) { // Onthehouse.com.au
         clearTimeout(loadingTimeout);
         loadingTimeout = setTimeout(onTheHouse, 2000);
@@ -72,58 +76,74 @@ function mainRun() {
             });
         }
     } else if (window.location.href.includes("https://www.allhomes.com.au/")) { // Allhomes.com.au
-        chrome.storage.sync.get("allhomes", function (enabled) {
-            if (enabled["allhomes"]) {
-                if ($("h1.css-hed0vw.e9vzjw54").length) {
-                    var address = $("h1.css-hed0vw.e9vzjw54").text();
+        clearTimeout(loadingTimeout);
+        loadingTimeout = setTimeout(allhomes, 1000);
+        function allhomes() {
+            chrome.storage.sync.get("allhomes", function (enabled) {
+                if (enabled["allhomes"]) {
+                    if ($("h1.css-hed0vw.e9vzjw54").length) {
+                        var address = $("h1.css-hed0vw.e9vzjw54").text();
 
-                    if ($(".css-q4719i.e18sdcwj0").length) {
-                        updateInfoBox(address, ".css-q4719i.e18sdcwj0");
-                    } else if ($(".css-1y9rfh").length) {
-                        updateInfoBox(address, ".css-1y9rfh");
+                        if ($(".css-q4719i.e18sdcwj0").length) {
+                            updateInfoBox(address, ".css-q4719i.e18sdcwj0");
+                        } else if ($(".css-1y9rfh").length) {
+                            updateInfoBox(address, ".css-1y9rfh");
+                        }
                     }
                 }
-            }
-        });
+            });
+        }
     } else if (window.location.href.includes("https://www.rent.com.au/property/")) { // Rent.com.au
-        chrome.storage.sync.get("rent", function (enabled) {
-            if (enabled["rent"]) {
-                if ($("address.detail-address").length) {
-                    var address = $("address.detail-address").text();
-                    address = address.replace(/(\r\n|\n|\r)/gm, "");
-                    address = address.replace(/\s\s+/g, ' ');
-                    address = address.trim();
+        clearTimeout(loadingTimeout);
+        loadingTimeout = setTimeout(rent, 1000);
+        function rent() {
+            chrome.storage.sync.get("rent", function (enabled) {
+                if (enabled["rent"]) {
+                    if ($("address.detail-address").length) {
+                        var address = $("address.detail-address").text();
+                        address = address.replace(/(\r\n|\n|\r)/gm, "");
+                        address = address.replace(/\s\s+/g, ' ');
+                        address = address.trim();
 
-                    updateInfoBox(address, ".block.detail-price");
+                        updateInfoBox(address, ".block.detail-price");
+                    }
                 }
-            }
-        });
+            });
+        }
     } else if (window.location.href.includes("https://reiwa.com.au/")) { // Reiwa.com.au
-        chrome.storage.sync.get("reiwa", function (enabled) {
-            if (enabled["reiwa"]) {
-                if ($("h1.remove-margin").length) {
-                    var address = $("h1.remove-margin").text();
-                    address = address.replace(/(\r\n|\n|\r)/gm, "");
-                    address = address.replace(/\s\s+/g, ' ');
-                    address = address.trim();
+        clearTimeout(loadingTimeout);
+        loadingTimeout = setTimeout(reiwa, 1000);
+        function reiwa() {
+            chrome.storage.sync.get("reiwa", function (enabled) {
+                if (enabled["reiwa"]) {
+                    if ($("h1.remove-margin").length) {
+                        var address = $("h1.remove-margin").text();
+                        address = address.replace(/(\r\n|\n|\r)/gm, "");
+                        address = address.replace(/\s\s+/g, ' ');
+                        address = address.trim();
 
-                    updateInfoBox(address, "#ctl00_uxContentHolder_ctl00_ucPropertyDetails_divPropertyDetails");
+                        updateInfoBox(address, "#ctl00_uxContentHolder_ctl00_ucPropertyDetails_divPropertyDetails");
+                    }
                 }
-            }
-        });
+            });
+        }
     } else if (window.location.href.includes("https://www.homely.com.au/homes/")) { // Homely.com.au
-        chrome.storage.sync.get("homely", function (enabled) {
-            if (enabled["homely"]) {
-                if ($("h1.mmdb4c-1.gGVYOy").length) {
-                    var address = $("h1.mmdb4c-1.gGVYOy").text();
-                    address = address.replace(/(\r\n|\n|\r)/gm, "");
-                    address = address.replace(/\s\s+/g, ' ');
-                    address = address.trim();
+        clearTimeout(loadingTimeout);
+        loadingTimeout = setTimeout(homely, 1000);
+        function homely() {
+            chrome.storage.sync.get("homely", function (enabled) {
+                if (enabled["homely"]) {
+                    if ($("h1.mmdb4c-1.gGVYOy").length) {
+                        var address = $("h1.mmdb4c-1.gGVYOy").text();
+                        address = address.replace(/(\r\n|\n|\r)/gm, "");
+                        address = address.replace(/\s\s+/g, ' ');
+                        address = address.trim();
 
-                    updateInfoBox(address, ".sc-1xfkwrb-4.jpXyFi");
+                        updateInfoBox(address, ".sc-1xfkwrb-4.jpXyFi");
+                    }
                 }
-            }
-        });
+            });
+        }
     }
 }
 
