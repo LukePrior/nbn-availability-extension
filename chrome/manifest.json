@@ -31,7 +31,7 @@
         "https://www.onthehouse.com.au/*",
         "https://www.allhomes.com.au/*",
         "https://www.rent.com.au/*",
-        "https://reiwa.com.au/*",
+        "https://www.reiwa.com.au/*",
         "https://www.homely.com.au/*"
       ],
       "run_at": "document_end",
@@ -65,7 +65,7 @@
         "https://www.onthehouse.com.au/*",
         "https://www.allhomes.com.au/*",
         "https://www.rent.com.au/*",
-        "https://reiwa.com.au/*",
+        "https://www.reiwa.com.au/*",
         "https://www.homely.com.au/*"
       ]
     }

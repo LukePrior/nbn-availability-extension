@@ -1,0 +1,72 @@
+/* Tooltip container */
+.nbn-tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip text */
+.nbn-tooltip .nbn-tooltiptext {
+    visibility: hidden;
+    width: 300px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    text-transform: none !important;
+
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.nbn-tooltip:hover .nbn-tooltiptext {
+    visibility: visible;
+}
+
+/* Tooltip hyperlinks */
+.nbn-tooltiptext > a {
+    color: white;
+    font-weight: bold;
+}
+
+/* NBN box */
+.nbn-stats {
+    border-style: solid;
+    border-width: 3px;
+    padding: 10px;
+    width: 100%;
+    max-width: 400px;
+    min-height: 110px;
+    margin: 10px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: black;
+}
+
+.nbn-stats.fttp {
+    border-color: #219653;
+    background-color: #EDFFEF;
+}
+
+.nbn-stats.fttc {
+    border-color: #F2C94C;
+    background-color: #FFF2C9;
+}
+
+.nbn-stats.fttn {
+    border-color: #F2994A;
+    background-color: #FFE3CB;
+}
+
+.nbn-stats.wireless {
+    border-color: #EB5757;
+    background-color: #E6D8D8;
+}
+
+.nbn-stats > p {
+    margin-block-start:0em;
+    margin-block-end:0em;
+}

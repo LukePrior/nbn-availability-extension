@@ -1,10 +1,19 @@
 {
   "name": "NBN Availability Check",
   "description": "Check what NBN technology is available at address on realestate.com.au & domain.com.au",
-  "version": "0.0.0.4",
+  "version": "0.0.0.5",
   "manifest_version": 2,
   "permissions": [
-    "storage"
+    "storage",
+    "*://www.realestate.com.au/*",
+    "*://www.domain.com.au/*",
+    "*://www.realestateview.com.au/*",
+    "*://www.onthehouse.com.au/*",
+    "*://www.allhomes.com.au/*",
+    "*://www.rent.com.au/*",
+    "*://www.reiwa.com.au/*",
+    "*://www.homely.com.au/*",
+    "*://nbn-service-check.vercel.app/*"
   ],
   "page_action": {
     "default_popup": "popup.html",
@@ -24,13 +33,14 @@
   "content_scripts": [
     {
       "matches": [
-        "https://www.realestate.com.au/*",
-        "https://www.domain.com.au/*",
-        "https://www.realestateview.com.au/*",
-        "https://www.onthehouse.com.au/*",
-        "https://www.allhomes.com.au/*",
-        "https://www.rent.com.au/*",
-        "https://reiwa.com.au/*"
+        "*://www.realestate.com.au/*",
+        "*://www.domain.com.au/*",
+        "*://www.realestateview.com.au/*",
+        "*://www.onthehouse.com.au/*",
+        "*://www.allhomes.com.au/*",
+        "*://www.rent.com.au/*",
+        "*://www.reiwa.com.au/*",
+        "*://www.homely.com.au/*"
       ],
       "run_at": "document_end",
       "js": [
