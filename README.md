@@ -13,7 +13,7 @@ This simple extension can automatically load NBN availability information for pr
 
 
 
-# Install Instructions
+# Install Instructions Chrome
 
 Click the green code button and select download zip at the following link: https://github.com/LukePrior/nbn-availability-extension
 
