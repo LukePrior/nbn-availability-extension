@@ -1,32 +1,39 @@
 var oldHref = document.location.href;
-var onTheHouseTimeout;
-var domainTimeout;
+var loadingTimeout;
 
 function mainRun() {
     if (window.location.href.includes("https://www.realestate.com.au/property-") || window.location.href.includes("https://www.realestate.com.au/sold/property-")) { // Realestate.com.au Listed + Recently Sold
-        chrome.storage.sync.get("realestate", function (enabled) {
-            if (enabled["realestate"]) {
-                var address = $("h1.property-info-address").text();
+        clearTimeout(loadingTimeout);
+        loadingTimeout = setTimeout(realestate, 1000);
+        function realestate() {
+            chrome.storage.sync.get("realestate", function (enabled) {
+                if (enabled["realestate"]) {
+                    var address = $("h1.property-info-address").text();
 
-                updateInfoBox(address, ".property-info__property-attributes");
-            }
-        });
+                    updateInfoBox(address, ".property-info__property-attributes");
+                }
+            });
+        }
     } else if (window.location.href.includes("https://www.realestate.com.au/property/")) { // Realestate.com.au Property Value
-        chrome.storage.sync.get("realestate", function (enabled) {
-            if (enabled["realestate"]) {
-                var street = $("div.property-info__short-address").text();
-                var suburb = $("div.property-info__full-suburb").text();
-                var address = street + " " + suburb;
-                address = address.replace(/(\r\n|\n|\r)/gm, "");
-                address = address.replace(/\s\s+/g, ' ');
-                address = address.trim();
+        clearTimeout(loadingTimeout);
+        loadingTimeout = setTimeout(realestateProperty, 1000);
+        function realestateProperty() {
+            chrome.storage.sync.get("realestate", function (enabled) {
+                if (enabled["realestate"]) {
+                    var street = $("div.property-info__short-address").text();
+                    var suburb = $("div.property-info__full-suburb").text();
+                    var address = street + " " + suburb;
+                    address = address.replace(/(\r\n|\n|\r)/gm, "");
+                    address = address.replace(/\s\s+/g, ' ');
+                    address = address.trim();
 
-                updateInfoBox(address, ".property-info__attributes");
-            }
-        });
+                    updateInfoBox(address, ".property-info__attributes");
+                }
+            });
+        }
     } else if (window.location.href.includes("https://www.domain.com.au/")) { // Domain.com.au
-        clearTimeout(domainTimeout);
-        domainTimeout = setTimeout(domain, 1000);
+        clearTimeout(loadingTimeout);
+        loadingTimeout = setTimeout(domain, 1000);
         function domain() {
             chrome.storage.sync.get("domain", function (enabled) {
                 if (enabled["domain"]) {
@@ -49,8 +56,8 @@ function mainRun() {
             }
         });
     } else if (window.location.href.includes("https://www.onthehouse.com.au/property")) { // Onthehouse.com.au
-        clearTimeout(onTheHouseTimeout);
-        onTheHouseTimeout = setTimeout(onTheHouse, 2000);
+        clearTimeout(loadingTimeout);
+        loadingTimeout = setTimeout(onTheHouse, 2000);
         function onTheHouse() {
             chrome.storage.sync.get("onthehouse", function (enabled) {
                 if (enabled["onthehouse"]) {
