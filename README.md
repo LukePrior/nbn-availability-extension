@@ -35,4 +35,4 @@ TBD: https://addons.mozilla.org/en-US/firefox/addon/nbn-availability-check/
 
 This extension uses the NBN Service Check [API](https://github.com/LukePrior/nbn-service-check) which is hosted on Vercel.
 
-[![Powered by Vercel](https://github.com/LukePrior/nbn-availability-extension/blob/master/powered-by-vercel.svg?raw=true)](https://vercel.com/)
+[![Powered by Vercel](https://raw.githubusercontent.com/LukePrior/nbn-availability-extension/main/powered-by-vercel.svg)](https://vercel.com/)
