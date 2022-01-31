@@ -86,9 +86,34 @@ function mainRun() {
                     address = address.replace(/(\r\n|\n|\r)/gm, "");
                     address = address.replace(/\s\s+/g, ' ');
                     address = address.trim();
-                    console.log(address);
 
                     updateInfoBox(address, ".block.detail-price");
+                }
+            }
+        });
+    } else if (window.location.href.includes("https://reiwa.com.au/")) { // Reiwa.com.au
+        chrome.storage.sync.get("reiwa", function (enabled) {
+            if (enabled["reiwa"]) {
+                if ($("h1.remove-margin").length) {
+                    var address = $("h1.remove-margin").text();
+                    address = address.replace(/(\r\n|\n|\r)/gm, "");
+                    address = address.replace(/\s\s+/g, ' ');
+                    address = address.trim();
+
+                    updateInfoBox(address, "#ctl00_uxContentHolder_ctl00_ucPropertyDetails_divPropertyDetails");
+                }
+            }
+        });
+    } else if (window.location.href.includes("https://www.homely.com.au/homes/")) { // Homely.com.au
+        chrome.storage.sync.get("homely", function (enabled) {
+            if (enabled["homely"]) {
+                if ($("h1.mmdb4c-1.gGVYOy").length) {
+                    var address = $("h1.mmdb4c-1.gGVYOy").text();
+                    address = address.replace(/(\r\n|\n|\r)/gm, "");
+                    address = address.replace(/\s\s+/g, ' ');
+                    address = address.trim();
+
+                    updateInfoBox(address, ".sc-1xfkwrb-4.jpXyFi");
                 }
             }
         });
