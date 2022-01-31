@@ -30,3 +30,9 @@ Navigate to the folder you unzipped and select the chrome folder at nbn-availabi
 # Install Instructions Firefox
 
 TBD: https://addons.mozilla.org/en-US/firefox/addon/nbn-availability-check/
+
+# NBN Availability API
+
+This extension uses the NBN Service Check [API](https://github.com/LukePrior/nbn-service-check) which is hosted on Vercel.
+
+[![Powered by Vercel](https://github.com/LukePrior/nbn-availability-extension/blob/master/powered-by-vercel.svg?raw=true)](https://vercel.com/)
