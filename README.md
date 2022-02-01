@@ -13,23 +13,76 @@ This simple extension can automatically load NBN availability information for pr
 - Reiwa
 - Homely
 
-# Install Instructions Chrome
+## Supported Networks
 
-Click the green code button and select download zip at the following link: https://github.com/LukePrior/nbn-availability-extension
+- NBN
+- OptiComm
+- LBNCo
+- OPENetworks
 
-Extract the downloaded file.
+# Install Instructions
 
-Visit chrome://extensions (via omnibox or menu -> Tools -> Extensions).
+## Chrome
 
-Enable Developer mode by ticking the checkbox in the upper-right corner.
+### Automatic Installation
 
-Click on the "Load unpacked extension..." button.
+https://chrome.google.com/webstore/detail/nbn-availability-check/opoaebfilfhfpadepddodjnjnofjnbdc
 
-Navigate to the folder you unzipped and select the chrome folder at nbn-availability-extension/chrome
+### Manual Installation
 
-# Install Instructions Firefox
+1. Click the green code button and select download zip at the following link: https://github.com/LukePrior/nbn-availability-extension
 
-TBD: https://addons.mozilla.org/en-US/firefox/addon/nbn-availability-check/
+2. Extract the downloaded file.
+
+3. Visit chrome://extensions (via omnibox or menu -> Tools -> Extensions).
+
+4. Enable Developer mode by ticking the checkbox in the upper-right corner.
+
+5. Click on the "Load unpacked extension..." button.
+
+6. Navigate to the folder you unzipped and select the chrome folder at nbn-availability-extension/chrome
+
+## Firefox
+
+### Automatic Installation
+
+https://addons.mozilla.org/en-US/firefox/addon/nbn-availability-check/
+
+### Manual Installation
+
+1. Click the green code button and select download zip at the following link: https://github.com/LukePrior/nbn-availability-extension
+
+2. Extract the downloaded file.
+
+3. Copy the contents of the chrome folder except `manifest.json` to the firefox file.
+
+4. Create a zip file of all the files in the firefox folder.
+
+5. Visit about:debugging#/runtime/this-firefox (via omnibox or menu -> Add-ons and themes -> Tools -> Debug Add-ons).
+
+6. Click on the "Load Temporary Add-on" button.
+
+7. Select the zipped file you created.
+
+## Microsoft Edge
+
+### Automatic Installation
+
+TBD
+
+### Manual Installation
+
+1. Click the green code button and select download zip at the following link: https://github.com/LukePrior/nbn-availability-extension
+
+2. Extract the downloaded file.
+
+3. Visit edge://extensions (via omnibox or menu -> Extensions -> Manage extensions).
+
+4. Enable Developer mode by ticking the checkbox in the lower-left corner.
+
+5. Click on the "Load Unpacked" button.
+
+6. Navigate to the folder you unzipped and select the chrome folder at nbn-availability-extension/chrome
 
 # NBN Availability API
 
