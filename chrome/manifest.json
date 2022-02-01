@@ -1,7 +1,7 @@
 {
   "name": "NBN Availability Check",
   "description": "Check what NBN technology is available at address on realestate.com.au & domain.com.au",
-  "version": "0.0.0.7",
+  "version": "0.0.0.8",
   "manifest_version": 3,
   "permissions": [
     "storage"
@@ -31,7 +31,7 @@
         "https://www.onthehouse.com.au/*",
         "https://www.allhomes.com.au/*",
         "https://www.rent.com.au/*",
-        "https://www.reiwa.com.au/*",
+        "https://reiwa.com.au/*",
         "https://www.homely.com.au/*"
       ],
       "run_at": "document_end",
@@ -65,7 +65,7 @@
         "https://www.onthehouse.com.au/*",
         "https://www.allhomes.com.au/*",
         "https://www.rent.com.au/*",
-        "https://www.reiwa.com.au/*",
+        "https://reiwa.com.au/*",
         "https://www.homely.com.au/*"
       ]
     }
