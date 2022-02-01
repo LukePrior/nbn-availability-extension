@@ -1,7 +1,7 @@
 var hiddenProperties = ["technologyClass"];
 
 function getData(address, callback) {
-    var url = "https://nbn-service-check-lukeprior.vercel.app/check?address=" + encodeURIComponent(address);
+    var url = "https://nbn-service-check.vercel.app/check?address=" + encodeURIComponent(address);
 
     var formatted = {};
 
