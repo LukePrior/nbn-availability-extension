@@ -26,7 +26,6 @@ This simple extension can automatically load NBN availability information for pr
 
 ### Automatic Installation
 
-NOTE THIS VERSION IS CURRENTLY OUT OF DATE AWAITING CHROME TO APPROVE LATEST VERSION.
 https://chrome.google.com/webstore/detail/nbn-availability-check/opoaebfilfhfpadepddodjnjnofjnbdc
 
 ### Manual Installation
