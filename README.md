@@ -70,7 +70,6 @@ https://addons.mozilla.org/en-US/firefox/addon/nbn-availability-check/
 
 ### Automatic Installation
 
-NOTE THIS VERSION IS CURRENTLY OUT OF DATE AWAITING MICROSOFT TO APPROVE LATEST VERSION.
 https://microsoftedge.microsoft.com/addons/detail/nbn-availability-check/bcoemipadbcdgdgoijfejceofakdnmgo
 
 ### Manual Installation
