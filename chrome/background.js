@@ -6,6 +6,8 @@ let allhomes = true;
 let rent = true;
 let reiwa = true;
 let homely = true;
+let realcommercial = true;
+let commercialrealestate = true;
 
 chrome.runtime.onInstalled.addListener(() => {
     chrome.storage.sync.set({ realestate });
@@ -16,4 +18,6 @@ chrome.runtime.onInstalled.addListener(() => {
     chrome.storage.sync.set({ rent });
     chrome.storage.sync.set({ reiwa });
     chrome.storage.sync.set({ homely });
+    chrome.storage.sync.set({ realcommercial });
+    chrome.storage.sync.set({ commercialrealestate });
 });

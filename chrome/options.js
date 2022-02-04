@@ -1,4 +1,4 @@
-var sites = {"Realestate":{}, "Domain":{}, "Realestate View":{}, "On The House":{}, "All Homes":{}, "Rent":{}, "Reiwa":{}, "Homely":{}};
+var sites = {"Realestate":{}, "Domain":{}, "Realestate View":{}, "On The House":{}, "All Homes":{}, "Rent":{}, "Reiwa":{}, "Homely":{}, "Real Commercial":{}, "Commercial Real Estate": {}};
 
 var content = $(".siteList")
 

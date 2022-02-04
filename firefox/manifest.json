@@ -1,7 +1,7 @@
 {
   "name": "NBN Availability Check",
   "description": "Check what NBN technology is available at address on realestate.com.au & domain.com.au",
-  "version": "0.0.0.9",
+  "version": "0.0.0.10",
   "manifest_version": 2,
   "permissions": [
     "storage",
@@ -13,6 +13,8 @@
     "*://www.rent.com.au/*",
     "*://reiwa.com.au/*",
     "*://www.homely.com.au/*",
+    "*://www.realcommercial.com.au/*",
+    "*://www.commercialrealestate.com.au/*",
     "*://nbn-service-check.vercel.app/*"
   ],
   "page_action": {
@@ -40,7 +42,9 @@
         "*://www.allhomes.com.au/*",
         "*://www.rent.com.au/*",
         "*://reiwa.com.au/*",
-        "*://www.homely.com.au/*"
+        "*://www.homely.com.au/*",
+        "*://www.realcommercial.com.au/*",
+        "*://www.commercialrealestate.com.au/*"
       ],
       "run_at": "document_end",
       "js": [

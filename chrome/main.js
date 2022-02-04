@@ -144,6 +144,40 @@ function mainRun() {
                 }
             });
         }
+    } else if (window.location.href.includes("https://www.realcommercial.com.au/")) { // RealCommercial.com.au
+        clearTimeout(loadingTimeout);
+        loadingTimeout = realcommercial(homely, 1000);
+        function realcommercial() {
+            chrome.storage.sync.get("realcommercial", function (enabled) {
+                if (enabled["realcommercial"]) {
+                    if ($("h1.Address_container_3HZgj").length) {
+                        var address = $("h1.Address_container_3HZgj").text();
+                        address = address.replace(/(\r\n|\n|\r)/gm, "");
+                        address = address.replace(/\s\s+/g, ' ');
+                        address = address.trim();
+
+                        updateInfoBox(address, ".AttributesPanel_heading_cQ2GV");
+                    }
+                }
+            });
+        }
+    } else if (window.location.href.includes("https://www.commercialrealestate.com.au/property/")) { // CommercialRealEstate.com.au
+        clearTimeout(loadingTimeout);
+        loadingTimeout = commercialrealestate(homely, 1000);
+        function commercialrealestate() {
+            chrome.storage.sync.get("commercialrealestate", function (enabled) {
+                if (enabled["commercialrealestate"]) {
+                    if ($("h1.css-wfocq").length) {
+                        var address = $("h1.css-wfocq").text();
+                        address = address.replace(/(\r\n|\n|\r)/gm, "");
+                        address = address.replace(/\s\s+/g, ' ');
+                        address = address.trim();
+
+                        updateInfoBox(address, ".css-1pkuoet");
+                    }
+                }
+            });
+        }
     }
 }
 
