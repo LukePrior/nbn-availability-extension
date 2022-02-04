@@ -12,6 +12,8 @@ This simple extension can automatically load NBN availability information for pr
 - Rent
 - Reiwa
 - Homely
+- Real Commercial
+- Commercial Real Estate
 
 ## Supported Networks
 
