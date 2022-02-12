@@ -26,9 +26,9 @@ This simple extension can automatically load NBN availability information for pr
 
 ## Chrome
 
-![Version](https://img.shields.io/chrome-web-store/v/opoaebfilfhfpadepddodjnjnofjnbdc?style=for-the-badge)
-![Users](https://img.shields.io/chrome-web-store/users/opoaebfilfhfpadepddodjnjnofjnbdc?style=for-the-badge)
-![Rating](https://img.shields.io/chrome-web-store/rating/opoaebfilfhfpadepddodjnjnofjnbdc?style=for-the-badge)
+[![Version](https://img.shields.io/chrome-web-store/v/opoaebfilfhfpadepddodjnjnofjnbdc?style=for-the-badge)](https://chrome.google.com/webstore/detail/nbn-availability-check/opoaebfilfhfpadepddodjnjnofjnbdc)
+[![Users](https://img.shields.io/chrome-web-store/users/opoaebfilfhfpadepddodjnjnofjnbdc?style=for-the-badge)](https://chrome.google.com/webstore/detail/nbn-availability-check/opoaebfilfhfpadepddodjnjnofjnbdc)
+[![Rating](https://img.shields.io/chrome-web-store/rating/opoaebfilfhfpadepddodjnjnofjnbdc?style=for-the-badge)](https://chrome.google.com/webstore/detail/nbn-availability-check/opoaebfilfhfpadepddodjnjnofjnbdc/reviews)
 
 ### Automatic Installation
 
@@ -50,9 +50,9 @@ https://chrome.google.com/webstore/detail/nbn-availability-check/opoaebfilfhfpad
 
 ## Firefox
 
-![Version](https://img.shields.io/amo/v/nbn-availability-check?style=for-the-badge)
-![Users](https://img.shields.io/amo/users/nbn-availability-check?style=for-the-badge)
-![Rating](https://img.shields.io/amo/rating/nbn-availability-check?style=for-the-badge)
+[![Version](https://img.shields.io/amo/v/nbn-availability-check?style=for-the-badge)](https://addons.mozilla.org/en-US/firefox/addon/nbn-availability-check/versions/)
+[![Users](https://img.shields.io/amo/users/nbn-availability-check?style=for-the-badge)](https://addons.mozilla.org/en-US/firefox/addon/nbn-availability-check/)
+[![Rating](https://img.shields.io/amo/rating/nbn-availability-check?style=for-the-badge)](https://addons.mozilla.org/en-US/firefox/addon/nbn-availability-check/reviews/)
 
 ### Automatic Installation
 
