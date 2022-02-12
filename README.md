@@ -26,6 +26,10 @@ This simple extension can automatically load NBN availability information for pr
 
 ## Chrome
 
+![Version](https://img.shields.io/chrome-web-store/v/opoaebfilfhfpadepddodjnjnofjnbdc?style=for-the-badge)
+![Users](https://img.shields.io/chrome-web-store/users/opoaebfilfhfpadepddodjnjnofjnbdc?style=for-the-badge)
+![Rating](https://img.shields.io/chrome-web-store/rating/opoaebfilfhfpadepddodjnjnofjnbdc?style=for-the-badge)
+
 ### Automatic Installation
 
 https://chrome.google.com/webstore/detail/nbn-availability-check/opoaebfilfhfpadepddodjnjnofjnbdc
@@ -45,6 +49,10 @@ https://chrome.google.com/webstore/detail/nbn-availability-check/opoaebfilfhfpad
 6. Navigate to the folder you unzipped and select the chrome folder at nbn-availability-extension/chrome
 
 ## Firefox
+
+![Version](https://img.shields.io/amo/v/nbn-availability-check?style=for-the-badge)
+![Users](https://img.shields.io/amo/users/nbn-availability-check?style=for-the-badge)
+![Rating](https://img.shields.io/amo/rating/nbn-availability-check?style=for-the-badge)
 
 ### Automatic Installation
 
