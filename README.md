@@ -103,3 +103,11 @@ https://microsoftedge.microsoft.com/addons/detail/nbn-availability-check/bcoemip
 This extension uses the NBN Service Check [API](https://github.com/LukePrior/nbn-service-check) which is hosted on Vercel.
 
 [![Powered by Vercel](https://raw.githubusercontent.com/LukePrior/nbn-availability-extension/main/powered-by-vercel.svg)](https://vercel.com/)
+
+# As Featured On
+
+<p float="left" style="margin-left: 5em;">
+  <a href="https://www.gizmodo.com.au/2022/02/nbn-browser-extension/"><img src="https://i.kinja-img.com/gawker-media/image/upload/ek6rmm21v7hlavuelxnq.jpg" alt="Gizmodo" width="192" height="108"></a>
+  &emsp;
+  <a href="https://thenewdaily.com.au/finance/property/2022/02/09/real-estate-nbn-browser-extension/"><img src="https://thenewdaily.com.au/wp-content/uploads/2016/07/TND-facebook2-960x600.png" alt="The New Daily" width="192" height="108"></a>
+</p>
