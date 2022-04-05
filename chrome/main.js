@@ -31,6 +31,56 @@ function mainRun() {
                 }
             });
         }
+    } else if (window.location.href.includes("https://www.realestate.com.au/collections/saved-properties/")) { // Realestate.com.au Saved Properties
+        clearTimeout(loadingTimeout);
+        loadingTimeout = setTimeout(realestateSaved, 1000);
+        function realestateSaved() {
+            chrome.storage.sync.get("realestate", function (enabled) {
+                if (enabled["realestate"]) {
+                    $(".front").each(function(i) {
+                        var street = $(this).find(".address").text();
+                        var suburb = $(this).find(".suburb").text();
+                        var address = street + " " + suburb;
+                        address = address.replace(/(\r\n|\n|\r)/gm, "");
+                        address = address.replace(/\s\s+/g, ' ');
+                        address = address.trim();
+
+                        var id = $(this).find("a:first").attr("id");
+                        var selector = "#" + id + " .features";
+
+                        $(".listing-card ul.features").css({"top": "20px", "text-align": "right"});
+
+                        updateInfoLine(address, selector);
+                    })
+                }
+            });
+        }
+    } else if (window.location.href.includes("https://www.domain.com.au/user/shortlist")) { // Domain.com.au Saved Properties
+        clearTimeout(loadingTimeout);
+        loadingTimeout = setTimeout(domainSaved, 1000);
+        function domainSaved() {
+            chrome.storage.sync.get("domain", function (enabled) {
+                if (enabled["domain"]) {
+                    $(".css-eztut6").each(function(i) {
+                        var address = $(this).find(".css-bqbbuf").text();
+                        address = address.replace(/(\r\n|\n|\r)/gm, "");
+                        address = address.replace(/\s\s+/g, ' ');
+                        address = address.trim();
+
+                        var id = $(this).data("listing-id");
+                        var selector = "div[data-listing-id=" + id + "] .css-1t41ar7";
+
+                        $(".nbn-line").css({"padding-left": "15px"});
+                        $(".css-1rj8fhl").css({"margin-top": "-4px"});
+
+                        updateInfoLine(address, selector);
+
+                        $(".nbn-line").css({"padding-left": "15px"});
+                        $(".css-1rj8fhl").css({"margin-top": "-4px"});
+                    })
+                }
+            });
+        }
     } else if (window.location.href.includes("https://www.domain.com.au/")) { // Domain.com.au
         clearTimeout(loadingTimeout);
         loadingTimeout = setTimeout(domain, 1000);
@@ -45,7 +95,7 @@ function mainRun() {
                 }
             });
         }
-    } else if (window.location.href.includes("https://www.realestateview.com.au/real-estate/") || window.location.href.includes("https://www.realestateview.com.au/rental-properties/")) { // Realestateview.com.au
+    }else if (window.location.href.includes("https://www.realestateview.com.au/real-estate/") || window.location.href.includes("https://www.realestateview.com.au/rental-properties/")) { // Realestateview.com.au
         clearTimeout(loadingTimeout);
         loadingTimeout = setTimeout(realestateview, 1000);
         function realestateview() {
@@ -122,7 +172,9 @@ function mainRun() {
                         address = address.replace(/\s\s+/g, ' ');
                         address = address.trim();
 
-                        updateInfoBox(address, "#ctl00_uxContentHolder_ctl00_ucPropertyDetails_divPropertyDetails");
+                        if (!$(".nbn-stats").length) {
+                            updateInfoBox(address, "#ctl00_uxContentHolder_ctl00_ucPropertyDetails_divPropertyDetails");
+                        }
                     }
                 }
             });
@@ -182,25 +234,43 @@ function mainRun() {
 }
 
 function updateInfoBox(address, location) {
+    var id = Math.random().toString(36).substr(2, 10);
     var loadingImage = chrome.runtime.getURL("images/loading.svg");
-    $(location).append(`<div class="nbn-stats"><div style="display:flex;align-items:center"><p>NBN information loading</p><img style="width:70px;margin-left:auto;" src="${loadingImage}"/></div></div>`);
+    $(location).append(`<div class="nbn-stats" id="nbn-stats-` + id + `"><div style="display:flex;align-items:center"><p>NBN information loading</p><img style="width:70px;margin-left:auto;" src="${loadingImage}"/></div></div>`);
 
     getData(address, function(data) {
-        if ($(".nbn-stats").length) {
-            $(".nbn-stats").empty();
+        if ($("#nbn-stats-" + id).length) {
+            $("#nbn-stats-" + id).empty();
         } else {
-            $(location).append(`<div class="nbn-stats"></div>`);
+            $(location).append(`<div class="nbn-stats" id="nbn-stats-` + id + `></div>`);
         }
         
-        $(".nbn-stats").addClass(data.technologyClass);
+        $("#nbn-stats-" + id).addClass(data.technologyClass);
         if (data.hasOwnProperty("failure")) {
-            $(".nbn-stats").append(data.failure);
+            $("#nbn-stats-" + id).append(data.failure);
         } else {
             for (var property of Object.keys(data)) {
                 if (!hiddenProperties.includes(property)) {
-                    $(".nbn-stats").append(data[property]);
+                    $("#nbn-stats-" + id).append(data[property]);
                 }
             }
+        }
+    });
+}
+
+function updateInfoLine(address, location) {
+    var id = Math.random().toString(36).substr(2, 10);
+    $(location).append(`<div class="nbn-line" id="nbn-stats-` + id + `"><div><p>NBN information loading</p></div></div>`);
+
+    getData(address, function(data) {
+        if ($("#nbn-stats-" + id).length) {
+            $("#nbn-stats-" + id).empty();
+        } else {
+            $(location).append(`<div class="nbn-line" id="nbn-stats-` + id + `></div>`);
+        }
+
+        if (!data.hasOwnProperty("failure")) {
+            $("#nbn-stats-" + id).append(`${data.rawProvider} ${data.rawTechnology} (${data.rawSpeed })`);
         }
     });
 }
