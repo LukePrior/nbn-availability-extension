@@ -12,6 +12,8 @@ This simple extension can automatically load NBN availability information for pr
 - Rent
 - Reiwa
 - Homely
+- Real Commercial
+- Commercial Real Estate
 
 ## Supported Networks
 
@@ -23,6 +25,10 @@ This simple extension can automatically load NBN availability information for pr
 # Install Instructions
 
 ## Chrome
+
+[![Version](https://img.shields.io/chrome-web-store/v/opoaebfilfhfpadepddodjnjnofjnbdc?style=for-the-badge)](https://chrome.google.com/webstore/detail/nbn-availability-check/opoaebfilfhfpadepddodjnjnofjnbdc)
+[![Users](https://img.shields.io/chrome-web-store/users/opoaebfilfhfpadepddodjnjnofjnbdc?style=for-the-badge)](https://chrome.google.com/webstore/detail/nbn-availability-check/opoaebfilfhfpadepddodjnjnofjnbdc)
+[![Rating](https://img.shields.io/chrome-web-store/rating/opoaebfilfhfpadepddodjnjnofjnbdc?style=for-the-badge)](https://chrome.google.com/webstore/detail/nbn-availability-check/opoaebfilfhfpadepddodjnjnofjnbdc/reviews)
 
 ### Automatic Installation
 
@@ -43,6 +49,10 @@ https://chrome.google.com/webstore/detail/nbn-availability-check/opoaebfilfhfpad
 6. Navigate to the folder you unzipped and select the chrome folder at nbn-availability-extension/chrome
 
 ## Firefox
+
+[![Version](https://img.shields.io/amo/v/nbn-availability-check?style=for-the-badge)](https://addons.mozilla.org/en-US/firefox/addon/nbn-availability-check/versions/)
+[![Users](https://img.shields.io/amo/users/nbn-availability-check?style=for-the-badge)](https://addons.mozilla.org/en-US/firefox/addon/nbn-availability-check/)
+[![Rating](https://img.shields.io/amo/rating/nbn-availability-check?style=for-the-badge)](https://addons.mozilla.org/en-US/firefox/addon/nbn-availability-check/reviews/)
 
 ### Automatic Installation
 
@@ -66,9 +76,12 @@ https://addons.mozilla.org/en-US/firefox/addon/nbn-availability-check/
 
 ## Microsoft Edge
 
+[![Version](https://img.shields.io/badge/dynamic/json?label=edge%20add-on&prefix=v&query=%24.version&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fbcoemipadbcdgdgoijfejceofakdnmgo&style=for-the-badge)](https://microsoftedge.microsoft.com/addons/detail/nbn-availability-check/bcoemipadbcdgdgoijfejceofakdnmgo)
+[![Users](https://img.shields.io/badge/dynamic/json?label=users&query=%24.activeInstallCount&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fbcoemipadbcdgdgoijfejceofakdnmgo&style=for-the-badge)](https://microsoftedge.microsoft.com/addons/detail/nbn-availability-check/bcoemipadbcdgdgoijfejceofakdnmgo)
+[![Rating](https://img.shields.io/badge/dynamic/json?label=rating&suffix=/5&query=%24.averageRating&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Fbcoemipadbcdgdgoijfejceofakdnmgo&style=for-the-badge)](https://microsoftedge.microsoft.com/addons/detail/nbn-availability-check/bcoemipadbcdgdgoijfejceofakdnmgo)
+
 ### Automatic Installation
 
-NOTE THIS VERSION IS CURRENTLY OUT OF DATE AWAITING MICROSOFT TO APPROVE LATEST VERSION.
 https://microsoftedge.microsoft.com/addons/detail/nbn-availability-check/bcoemipadbcdgdgoijfejceofakdnmgo
 
 ### Manual Installation
@@ -90,3 +103,11 @@ https://microsoftedge.microsoft.com/addons/detail/nbn-availability-check/bcoemip
 This extension uses the NBN Service Check [API](https://github.com/LukePrior/nbn-service-check) which is hosted on Vercel.
 
 [![Powered by Vercel](https://raw.githubusercontent.com/LukePrior/nbn-availability-extension/main/powered-by-vercel.svg)](https://vercel.com/)
+
+# As Featured On
+
+<p float="left" style="margin-left: 5em;">
+  <a href="https://www.gizmodo.com.au/2022/02/nbn-browser-extension/"><img src="https://i.kinja-img.com/gawker-media/image/upload/ek6rmm21v7hlavuelxnq.jpg" alt="Gizmodo" width="192" height="108"></a>
+  &emsp;
+  <a href="https://thenewdaily.com.au/finance/property/2022/02/09/real-estate-nbn-browser-extension/"><img src="https://thenewdaily.com.au/wp-content/uploads/2016/07/TND-facebook2-960x600.png" alt="The New Daily" width="192" height="108"></a>
+</p>
