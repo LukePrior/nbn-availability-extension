@@ -1,3 +1,5 @@
+# NOTE: This extension is currently broken due to an API change, will be updated in future
+
 # NBN Availability Check Chrome Extension
 
 This simple extension can automatically load NBN availability information for properties on realestate.com.au & domain.com.au including technology type, maximum line speed, and co-existance status if available.
