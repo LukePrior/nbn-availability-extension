@@ -1,4 +1,6 @@
-# NOTE: This extension is currently broken due to an API change, will be updated in future
+# NOTE: This extension is currently broken due to an API change
+
+Use: https://nbnlocationid.com/
 
 # NBN Availability Check Chrome Extension
 
